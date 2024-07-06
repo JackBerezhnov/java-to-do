@@ -12,7 +12,6 @@ public class Main {
 		button.setBounds(150, 200, 220, 50);
 		
 		panel.add(button);
-		panel.setBackground(Color.red);
 		
 		frame.add(panel);
 		
