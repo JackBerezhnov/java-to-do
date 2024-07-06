@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.*;
 
@@ -11,15 +12,14 @@ public class Main {
 		JTextField input = new JTextField();
 		
 		button.setBounds(150, 200, 220, 50);
-		input.setBounds(0, 0, 500, 100);
+		Dimension preferredSize = new Dimension(300, 20);
+		input.setPreferredSize(preferredSize);
 		
-		panel.add(button);
 		panel.add(input);
+		panel.add(button);
 		
 		frame.add(panel);
-		
 		frame.setSize(500, 600);
-		
 		frame.setVisible(true); 
 		
 	}
