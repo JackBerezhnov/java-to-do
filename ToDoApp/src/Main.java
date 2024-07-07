@@ -10,8 +10,6 @@ import javax.swing.event.ListSelectionListener;
 public class Main {
 	public static void main(String[] args) {
 		
-		String tasks[] = {"Wash a car", "Work", "Sleep"};
-		
 		JFrame frame = new JFrame();
 		JButton addButton = new JButton("Add Task");
 		JPanel panel = new JPanel();
