@@ -12,18 +12,20 @@ public class Main {
 		
 		JFrame frame = new JFrame();
 		JButton addButton = new JButton("Add Task");
+		JButton deleteButton = new JButton("Delete Task");
 		JPanel panel = new JPanel();
 		JTextField input = new JTextField();
 		DefaultListModel<String> taskListModel = new DefaultListModel<>();
 		JList<String> listOfTasks = new JList<>(taskListModel);
 		
 		addButton.setBounds(150, 200, 220, 50);
-		Dimension preferredSize = new Dimension(300, 20);
+		deleteButton.setBounds(150, 200, 220, 50);
+		Dimension preferredSize = new Dimension(200, 20);
 		input.setPreferredSize(preferredSize);
 			
 		panel.add(input);
 		panel.add(addButton);
-		
+		panel.add(deleteButton);
 		frame.add(panel, "North");
 		frame.add(new JScrollPane(listOfTasks), "Center");
 
