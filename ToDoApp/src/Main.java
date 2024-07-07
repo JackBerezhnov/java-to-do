@@ -13,6 +13,7 @@ public class Main {
 		JFrame frame = new JFrame();
 		JButton addButton = new JButton("Add Task");
 		JButton deleteButton = new JButton("Delete Task");
+		JButton completeButton = new JButton("Complete Task");
 		JPanel panel = new JPanel();
 		JTextField input = new JTextField();
 		DefaultListModel<String> taskListModel = new DefaultListModel<>();
@@ -20,12 +21,14 @@ public class Main {
 		
 		addButton.setBounds(150, 200, 220, 50);
 		deleteButton.setBounds(150, 200, 220, 50);
+		completeButton.setBounds(150, 200, 220, 50);
 		Dimension preferredSize = new Dimension(200, 20);
 		input.setPreferredSize(preferredSize);
 			
 		panel.add(input);
 		panel.add(addButton);
 		panel.add(deleteButton);
+		panel.add(completeButton);
 		frame.add(panel, "North");
 		frame.add(new JScrollPane(listOfTasks), "Center");
 
@@ -51,7 +54,7 @@ public class Main {
 			}
 		});
 		
-		frame.setSize(500, 600);
+		frame.setSize(700, 700);
 		frame.setVisible(true); 
 		
 	}
