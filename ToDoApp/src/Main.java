@@ -40,10 +40,14 @@ public class Main {
 			}
 		});
 		
-		listOfTasks.addListSelectionListener( new ListSelectionListener() {
+		deleteButton.addActionListener(new ActionListener() {
 			@Override
-			public void valueChanged(ListSelectionEvent e) {
-				System.out.print(listOfTasks.getSelectedIndex());
+			public void actionPerformed(ActionEvent e) {
+				int selectedIndex = listOfTasks.getSelectedIndex();
+				System.out.print(selectedIndex);
+				if (selectedIndex != -1) {
+					taskListModel.remove(selectedIndex);
+				}
 			}
 		});
 		
