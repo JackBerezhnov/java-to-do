@@ -47,9 +47,19 @@ public class Main {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				int selectedIndex = listOfTasks.getSelectedIndex();
-				System.out.print(selectedIndex);
 				if (selectedIndex != -1) {
 					taskListModel.remove(selectedIndex);
+				}
+			}
+		});
+		
+		completeButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int selectedIndex = listOfTasks.getSelectedIndex();
+				if (selectedIndex != -1) {
+					String task = taskListModel.getElementAt(selectedIndex);
+					taskListModel.set(selectedIndex, task + " (Completed)");
 				}
 			}
 		});
